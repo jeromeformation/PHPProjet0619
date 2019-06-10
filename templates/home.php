@@ -10,8 +10,13 @@ require 'inc/header.php' ?>
     <h1>Page d'accueil</h1>
 
     <ul>
-        <?php foreach ($products as $product) : ?>
-            <li><?= $product->getName(); ?></li>
+        <?php foreach ($articles as $article) : ?>
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title"><?= $article->getTitle(); ?></h5>
+                    <p class="card-text"><?= $article->getContent(); ?></p>
+                </div>
+            </div>
         <?php endforeach; ?>
     </ul>
 

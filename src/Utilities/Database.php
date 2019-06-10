@@ -27,7 +27,7 @@ class Database
     {
         // Connexion à MySQL
         $this->pdo = new \PDO(
-            'mysql:host=localhost;dbname=catalogue',
+            'mysql:host=localhost;dbname=blog',
             'root',
             null,
             [

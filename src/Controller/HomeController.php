@@ -1,7 +1,7 @@
 <?php
 namespace src\Controller;
 
-use src\Entity\Produit;
+use src\Entity\Article;
 use src\Utilities\Database;
 
 class HomeController
@@ -9,8 +9,8 @@ class HomeController
     public function home()
     {
         $database = new Database();
-        $products = $database->query('SELECT * FROM produit', Produit::class);
+        $articles = $database->query('SELECT * FROM article', Article::class);
 
-        return compact('products');
+        return compact('articles');
     }
 }
